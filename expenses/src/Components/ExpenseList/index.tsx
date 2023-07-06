@@ -19,7 +19,7 @@ function ExpenseList() {
             ))}
 
 <div>
-                <h3>Despesa Total: R$ {expenseTotal}</h3>
+                <h3 className="font-bold text-3xl pt-4" >Despesa Total: R$ {expenseTotal.toFixed(2)}</h3>
             </div>
         </div>
     )

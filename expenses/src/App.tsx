@@ -7,6 +7,7 @@ import ExpenseProvider from './Contexts/ExpenseContext'
 import Balance from './Components/Balance'
 import InputSection from './Components/InputSection'
 import ListSection from './Components/ListSection'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           </div>
         </ExpenseProvider>
       </div>
+      <Footer/>
 
     </>
   )

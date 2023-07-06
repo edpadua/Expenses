@@ -14,7 +14,7 @@ function Expense({ expense }: Props) {
                 <h2>{expense.name}</h2>
             </div>
             <div>
-                <p>R$ {expense.value}</p>
+                <p>R$ {expense.value.toFixed(2)}</p>
             </div>
 
         </div>

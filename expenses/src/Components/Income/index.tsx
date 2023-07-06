@@ -14,7 +14,7 @@ function Income({ income }: Props) {
                 <h2>{income.name}</h2>
             </div>
             <div>
-                <p>R$ {income.value}</p>
+                <p>R$ {income.value.toFixed(2)}</p>
             </div>
            
         </div>

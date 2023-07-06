@@ -19,7 +19,7 @@ function IncomeList() {
             ))}
 
             <div>
-                <h3>Receita Total: R$ {incomeTotal}</h3>
+                <h3 className="font-bold text-3xl pt-4">Receita Total: R$ {incomeTotal.toFixed(2)}</h3>
             </div>
         </div>
     )
