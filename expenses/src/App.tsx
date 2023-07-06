@@ -3,8 +3,10 @@ import { useState } from 'react'
 import './App.css'
 
 import Navbar from './Components/Navbar'
-import AddExpense from './Components/AddExpense'
-import AddIncome from './Components/AddIncome'
+import ExpenseProvider from './Contexts/ExpenseContext'
+import Balance from './Components/Balance'
+import InputSection from './Components/InputSection'
+import ListSection from './Components/ListSection'
 
 function App() {
 
@@ -13,8 +15,15 @@ function App() {
     <>
       <Navbar />
       <div className="w-full px-16 py-10">
-        <AddExpense />
-        <AddIncome />
+        <ExpenseProvider>
+          <InputSection />
+          <div className="pt-10">
+            <ListSection />
+          </div>
+          <div className="pt-10">
+            <Balance />
+          </div>
+        </ExpenseProvider>
       </div>
 
     </>

@@ -5,18 +5,27 @@ import { ExpenseContextType, IExpense, IIncome } from '../@types/expense';
 export const ExpenseContext = React.createContext<ExpenseContextType | null>(null);
 
 
-const ExpenseProvider: React.FC<React.ReactNode> = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const ExpenseProvider: React.FC<Props> = ({ children }) => {
     const [expenses, setExpenses] = React.useState<IExpense[]>([]);
     const [incomes, setIncomes] = React.useState<IIncome[]>([]);
+    const[expenseTotal,setExpensesTotal]=React.useState(0);
+    const[incomeTotal,setIncomesTotal]=React.useState(0);
+    const[balance,setBalance]=React.useState(0);
   
     const saveExpense = (expense: IExpense) => {
       const newExpense: IExpense = {
-        id: Math.random(), // not really unique - but fine for this example
+        id: Math.random(), 
         name: expense.name,
         value: expense.value,
       
       };
       setExpenses([...expenses, newExpense]);
+      setExpensesTotal(expenseTotal+expense.value);
+     
     };
   
     const updateExpense = (id: number) => {
@@ -29,6 +38,13 @@ const ExpenseProvider: React.FC<React.ReactNode> = ({ children }) => {
     };
 
 
+    const updateBalance = () => {
+        const newBalance=incomeTotal-expenseTotal;
+        setBalance(newBalance);
+        
+    };
+
+
     const saveIncome = (income: IIncome) => {
       const newIncome: IIncome = {
         id: Math.random(), // not really unique - but fine for this example
@@ -37,6 +53,8 @@ const ExpenseProvider: React.FC<React.ReactNode> = ({ children }) => {
       
       };
       setIncomes([...incomes, newIncome]);
+      setIncomesTotal(incomeTotal+income.value);
+   
     };
   
     const updateIncome = (id: number) => {
@@ -48,7 +66,7 @@ const ExpenseProvider: React.FC<React.ReactNode> = ({ children }) => {
       });
     };
   
-    return <ExpenseContext.Provider value={{ expenses, saveExpense, updateExpense, incomes, saveIncome, updateIncome }}>{children}</ExpenseContext.Provider>;
+    return <ExpenseContext.Provider value={{ expenses,  saveExpense, updateExpense, incomes, saveIncome, updateIncome, incomeTotal, expenseTotal, balance }}>{children}</ExpenseContext.Provider>;
   };
   
   export default ExpenseProvider;
