@@ -28,10 +28,7 @@ The project was developed with the ReactJS library, using Vite and in this case 
 
 ### Screeshot - Mobile
 
-
-
-<img src="https://github.com/edpadua/Livros/assets/4975360/8884c25e-d042-40d0-b804-22aecd76d4d7" style="width: 50%;" >
-
+<img src="https://github.com/edpadua/Expenses/assets/4975360/9db7897b-e58a-40de-a60f-27f7dcec01af" style="width: 50%;" >
 
 
 ### Technologies
