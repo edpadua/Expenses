@@ -1,4 +1,3 @@
-import * as React from 'react';
 
 import { IExpense } from '../../@types/expense';
 

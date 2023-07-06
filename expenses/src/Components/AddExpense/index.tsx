@@ -4,20 +4,15 @@ import { useState, useContext } from 'react'
 
 import {ExpenseContext} from "../../Contexts/ExpenseContext"
 
-import type { ExpenseContextType, IExpense } from "../../@types/expense.d.ts";
+import type { ExpenseContextType} from "../../@types/expense.d.ts";
 
-import InputField from '../InputField/index.tsx';
+
 
 function AddExpense() {
   const [name, setName] = useState('');
   const [amount, setAmount] = useState(0);
 
   const{saveExpense}=useContext(ExpenseContext) as ExpenseContextType;
-
-  type HTMLElementEvent<T extends HTMLElement> = Event & {
-    target: T;
-  }
-
 
 
 

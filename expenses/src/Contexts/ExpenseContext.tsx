@@ -14,7 +14,7 @@ const ExpenseProvider: React.FC<Props> = ({ children }) => {
     const [incomes, setIncomes] = React.useState<IIncome[]>([]);
     const[expenseTotal,setExpensesTotal]=React.useState(0);
     const[incomeTotal,setIncomesTotal]=React.useState(0);
-    const[balance,setBalance]=React.useState(0);
+    
   
     const saveExpense = (expense: IExpense) => {
       const newExpense: IExpense = {
@@ -38,11 +38,7 @@ const ExpenseProvider: React.FC<Props> = ({ children }) => {
     };
 
 
-    const updateBalance = () => {
-        const newBalance=incomeTotal-expenseTotal;
-        setBalance(newBalance);
-        
-    };
+    
 
 
     const saveIncome = (income: IIncome) => {
@@ -66,7 +62,7 @@ const ExpenseProvider: React.FC<Props> = ({ children }) => {
       });
     };
   
-    return <ExpenseContext.Provider value={{ expenses,  saveExpense, updateExpense, incomes, saveIncome, updateIncome, incomeTotal, expenseTotal, balance }}>{children}</ExpenseContext.Provider>;
+    return <ExpenseContext.Provider value={{ expenses,  saveExpense, updateExpense, incomes, saveIncome, updateIncome, incomeTotal, expenseTotal}}>{children}</ExpenseContext.Provider>;
   };
   
   export default ExpenseProvider;

@@ -16,7 +16,6 @@ export interface IExpense {
     incomes: IIncome[];
     expenseTotal: number;
     incomeTotal: number;
-    balance: numeber;
     saveExpense: (expense: IExpense) => void;
     updateExpense: (id: number) => void;
     saveIncome: (income: IIncome) => void;

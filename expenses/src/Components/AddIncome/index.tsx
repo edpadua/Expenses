@@ -4,7 +4,7 @@ import { useState, useContext } from 'react'
 
 import {ExpenseContext} from "../../Contexts/ExpenseContext"
 
-import type { ExpenseContextType, IIncome } from "../../@types/expense.d.ts";
+import type { ExpenseContextType } from "../../@types/expense.d.ts";
 
 
 
