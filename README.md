@@ -14,7 +14,7 @@
  
 ## About
 
-This project is an expense tracking system. From a list of expenses (expenses) and from another list of revenues (earnings) the balance sheet value is calculated, which can be negative or positive. The user can add each expense and each gain and a separate list with the sum of all items is shown below and at the end the total balance is presented.
+This project is an expense tracking system. From a list of expenses (expenses) and from another list of incomes (earnings) the balance sheet value is calculated, which can be negative or positive. The user can add each expense and each gain and a separate list with the sum of all items is shown below and at the end the total balance is presented.
 
 The project was developed with the ReactJS library, using Vite and in this case the code was made in TypeScript. For state management, the ContextAPI library was used.
 
